@@ -2,7 +2,7 @@
 
 A high-fidelity, conversion-oriented Software Engineering portfolio built with Next.js 15, Tailwind CSS, and Framer Motion. Engineered for elite performance, it features a custom 3D Data Console geometry, secure transmission mock terminals, and advanced Framer Motion layout physics.
 
-![Home Page Architecture](public/screenshots/home.png)
+![Home Page Architecture](public/screenshots/Slider_Section.webp)
 
 ## Core Architecture
 
