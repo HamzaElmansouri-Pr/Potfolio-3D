@@ -4,6 +4,7 @@ import { HeroOrbitSlider } from "@/components/sections/HeroOrbitSlider";
 import { AboutWrapper } from "@/components/sections/AboutWrapper";
 import { Services } from "@/components/sections/Services";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { ContactCTA } from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
   title: "YourName — Software Engineering Portfolio",
@@ -18,6 +19,7 @@ export default function HomePage() {
       <AboutWrapper />
       <Services />
       <FeaturedProjects />
+      <ContactCTA />
     </>
   );
 }
