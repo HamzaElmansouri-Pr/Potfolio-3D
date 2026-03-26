@@ -18,7 +18,7 @@ Designed adhering strictly to the "Minimalist Enterprise" aesthetic using a Deep
 A comprehensive, scroll-revealing layout tailored to convert B2B clients and recruiters via high-fidelity aesthetic layers.
 
 **1. The 3D Orbit Center**
-![Hero Node](public/screenshots/home-hero.png)
+![Hero Node](public/screenshots/Slider_Section.mp4)
 
 **2. The Identity Matrix (About)**
 ![About Identity](public/screenshots/home-about.png)
