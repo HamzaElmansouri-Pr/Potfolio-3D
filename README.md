@@ -18,16 +18,19 @@ Designed adhering strictly to the "Minimalist Enterprise" aesthetic using a Deep
 A comprehensive, scroll-revealing layout tailored to convert B2B clients and recruiters via high-fidelity aesthetic layers.
 
 **1. The 3D Orbit Center**
-![Hero Node](public/screenshots/Slider_Section.mp4)
+![Hero Node](public/screenshots/Slider_Section.webp)
 
-**2. The Identity Matrix (About)**
-![About Identity](public/screenshots/home-about.png)
+**2.1 The Identity Matrix Terminal (About)**
+![About Identity](public/screenshots/home-about-terminal.png)
+
+**2.2 The Identity Matrix Classic (About)**
+![About Identity](public/screenshots/home-about-classic.png)
 
 **3. Enterprise Bento Services**
 ![Services Grid](public/screenshots/home-services.png)
 
 **4. Parallax Featured Stacks**
-![Projects Grid](public/screenshots/home-projects.webp)
+![Projects Grid](public/screenshots/home-projects.png)
 
 **5. System Telemetry Footer**
 ![Contact Footer](public/screenshots/home-footer.png)
@@ -35,7 +38,7 @@ A comprehensive, scroll-revealing layout tailored to convert B2B clients and rec
 ### The Elite Data Console (Projects Archive)
 A rigid 3-column layout powered by an overarching `<VaultHeader>` and a Neon Capsule text-filtration engine. Features include Grayscale-to-Color hover masking, sweeping CSS laser scans, and physical `rotateX/Y` mouse-tracking 5-degree tilts.
 
-![Projects Archive](public/screenshots/projects.png)
+![Projects Archive](public/screenshots/all-projects.png)
 
 ### The Secure Contact Terminal
 A simulated transmission terminal checking against live UTC local-time vectors and implementing a forced 2-second locked transmission delay state before triggering a Layout Expansion payload.
