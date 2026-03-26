@@ -44,7 +44,7 @@ export function ContactCTA() {
   const { ref, controls } = useScrollReveal(0.2);
 
   return (
-    <section className="relative w-full py-32 md:py-48 bg-[#030508] overflow-hidden flex items-center justify-center border-t border-white/5">
+    <section className="relative w-full py-32 md:py-48 bg-surface-light dark:bg-[#030508] overflow-hidden flex items-center justify-center border-t border-slate-200 dark:border-white/5">
       
       {/* ─── Dot Grid Background ─── */}
       <div 
@@ -73,7 +73,7 @@ export function ContactCTA() {
         }}
         className="container mx-auto px-6 max-w-4xl text-center relative z-10"
       >
-        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tight drop-shadow-lg mb-12">
+        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-text-light dark:text-white tracking-tight drop-shadow-sm dark:drop-shadow-lg mb-12">
           READY TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-cobalt-400 to-emerald-400">ARCHITECT</span> THE FUTURE?
         </h2>
 
@@ -96,8 +96,8 @@ export function ContactCTA() {
 
         {/* ─── Status Line ─── */}
         <div className="flex justify-center items-center">
-          <div className="px-4 py-2 border border-white/10 rounded-md bg-white/5 backdrop-blur-sm">
-            <p className="font-mono text-[10px] md:text-xs text-cobalt-200/80 tracking-widest uppercase flex items-center">
+          <div className="px-4 py-2 border border-slate-200 dark:border-white/10 rounded-md bg-white dark:bg-white/5 shadow-sm dark:shadow-none backdrop-blur-sm">
+            <p className="font-mono text-[10px] md:text-xs text-slate-500 dark:text-cobalt-200/80 tracking-widest uppercase flex items-center">
               <span className="mr-2 text-emerald-400">]</span>
               [ AVAILABILITY: ACCEPTING_PROJECTS ]
               <span className="ml-2 text-emerald-400">[</span>

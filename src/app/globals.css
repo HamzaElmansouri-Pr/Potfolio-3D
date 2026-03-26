@@ -8,10 +8,10 @@
 /* ─── CSS Custom Properties ─────────────────────────────────────────────────── */
 @layer base {
   :root {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --text-primary: #0b1120;
-    --text-secondary: #475569;
+    --bg-primary: #F8FAFC;
+    --bg-secondary: #F1F5F9;
+    --text-primary: #0F172A;
+    --text-secondary: #334155;
     --text-muted: #94a3b8;
     --border: rgba(15, 23, 42, 0.1);
     --glass-bg: rgba(255, 255, 255, 0.7);
@@ -77,7 +77,16 @@
   }
 
   .glass-card {
-    @apply glass rounded-bento p-6;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    @apply rounded-bento p-6;
+  }
+
+  .dark .glass-card {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
   .glass-nav {
@@ -93,8 +102,17 @@
 
   /* Bento grid item */
   .bento-item {
-    @apply glass-card cursor-default;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    @apply rounded-bento p-6 cursor-default;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .dark .bento-item {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
   .bento-item:hover {
@@ -148,10 +166,19 @@
 
   /* Orbit item card */
   .orbit-card {
-    @apply glass absolute flex flex-col items-center gap-2 p-4
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    @apply absolute flex flex-col items-center gap-2 p-4
            rounded-2xl cursor-pointer select-none;
     transition: box-shadow 0.2s ease;
     will-change: transform, opacity;
+  }
+  
+  .dark .orbit-card {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
   .orbit-card:hover {

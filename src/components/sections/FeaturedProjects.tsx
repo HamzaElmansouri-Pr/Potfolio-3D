@@ -25,7 +25,7 @@ export function FeaturedProjects() {
   return (
     <section 
       id="work" 
-      className="relative z-10 w-full py-24 md:py-32 bg-[#05080E] border-t border-b border-white/5"
+      className="relative z-10 w-full py-24 md:py-32 bg-surface-light dark:bg-[#05080E] border-t border-b border-slate-200 dark:border-white/5"
     >
       <div className="container mx-auto px-6 max-w-7xl">
         
@@ -35,7 +35,7 @@ export function FeaturedProjects() {
             <h2 className="font-display text-xs md:text-sm tracking-[0.3em] font-bold text-cobalt-500 uppercase mb-3 drop-shadow-sm">
               Architecture Showcase
             </h2>
-            <h3 className="font-display text-3xl md:text-5xl lg:text-5xl font-black text-white tracking-tight drop-shadow-lg">
+            <h3 className="font-display text-3xl md:text-5xl lg:text-5xl font-black text-text-light dark:text-white tracking-tight drop-shadow-sm dark:drop-shadow-lg">
               Unified <span className="text-transparent bg-clip-text bg-gradient-to-r from-cobalt-300 to-cobalt-500">Systems</span>
             </h3>
           </div>
@@ -77,7 +77,7 @@ export function FeaturedProjects() {
               <Link href={`/projects/${project.slug}`} className="block relative w-full h-full">
                 
                 {/* ─── Terminal Title Bar ─── */}
-                <div className="flex items-center justify-between px-4 py-3 bg-[#090E1A] border border-white/10 rounded-t-xl border-b-0 relative z-20">
+                <div className="flex items-center justify-between px-4 py-3 bg-slate-50 dark:bg-[#090E1A] border border-slate-200 dark:border-white/10 rounded-t-xl border-b-0 relative z-20">
                   <div className="font-mono text-[10px] text-cobalt-300/60 font-medium tracking-widest">
                     [ 0{idx + 1} ]
                   </div>
@@ -93,26 +93,26 @@ export function FeaturedProjects() {
                 </div>
 
                 {/* ─── Image & HUD Container ─── */}
-                <div className="relative w-full aspect-[4/3] rounded-b-xl overflow-hidden border border-white/10 group-hover/card:border-cobalt-500/50 group-hover/card:shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-500 bg-[#030508]">
+                <div className="relative w-full aspect-[4/3] rounded-b-xl overflow-hidden border border-slate-200 dark:border-white/10 group-hover/card:border-cobalt-500/50 shadow-sm dark:shadow-none group-hover/card:shadow-md dark:group-hover/card:shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-500 bg-white dark:bg-[#030508]">
                   
                   {/* Background Image with Hover Scale */}
                   <Image 
                     src={project.heroImage} 
                     alt={project.title} 
                     fill 
-                    className="object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover/card:scale-105"
+                    className="object-cover contrast-[1.10] dark:contrast-100 transition-transform duration-[1.5s] ease-[cubic-bezier(0.23,1,0.32,1)] group-hover/card:scale-105"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                     priority={idx === 0}
                   />
 
                   {/* Gradient base to ensure text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-transparent to-transparent opacity-60 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#0B1120] via-transparent to-transparent opacity-80 dark:opacity-60 pointer-events-none" />
 
                   {/* ─── Glassmorphism Absolute HUD ─── */}
                   <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
-                    <div className="backdrop-blur-md bg-[#0B1120]/60 border border-white/10 p-5 rounded-lg shadow-glass transform transition-transform duration-500 group-hover/card:translate-y-[-4px]">
+                    <div className="backdrop-blur-md bg-white/80 dark:bg-[#0B1120]/60 border border-slate-200 dark:border-white/10 p-5 rounded-lg shadow-sm dark:shadow-glass transform transition-transform duration-500 group-hover/card:translate-y-[-4px]">
                       
-                      <h3 className="font-display font-bold text-lg md:text-xl text-white mb-3 tracking-tight drop-shadow-md line-clamp-1">
+                      <h3 className="font-display font-bold text-lg md:text-xl text-text-light dark:text-white mb-3 tracking-tight drop-shadow-sm line-clamp-1">
                         {project.title}
                       </h3>
                       
@@ -141,7 +141,7 @@ export function FeaturedProjects() {
         <div className="mt-20 flex justify-center">
           <Link 
             href="/projects" 
-            className="group relative px-6 py-3 bg-transparent border border-white/10 rounded-full overflow-hidden transition-all hover:border-cobalt-500/50 hover:shadow-[0_0_20px_rgba(37,99,235,0.15)]"
+            className="group relative px-6 py-3 bg-transparent border border-slate-300 dark:border-white/10 rounded-full overflow-hidden transition-all hover:border-cobalt-500/50 hover:shadow-[0_0_20px_rgba(37,99,235,0.15)]"
           >
             <div className="absolute inset-0 bg-cobalt-500/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             <span className="relative z-10 flex items-center text-xs font-mono font-bold tracking-widest text-cobalt-100 uppercase">

@@ -25,7 +25,7 @@ export default function ContactTerminal() {
   };
 
   return (
-    <div className="min-h-screen bg-[#030508] text-white pt-32 pb-24 relative overflow-hidden">
+    <div className="min-h-screen bg-surface-light dark:bg-[#030508] text-text-light dark:text-white pt-32 pb-24 relative overflow-hidden">
 
       {/* Background Noise */}
       <div
@@ -54,7 +54,7 @@ export default function ContactTerminal() {
               </p>
             </div>
 
-            <p className="text-white/60 leading-relaxed max-w-md">
+            <p className="text-slate-600 dark:text-white/60 leading-relaxed max-w-md">
               Encrypted channel open. Submit project parameters for architectural review and systems engineering quotation.
             </p>
 
@@ -62,19 +62,19 @@ export default function ContactTerminal() {
 
               <div className="flex items-center text-white/50 border-white/5 border-b pb-4">
                 <MapPin size={16} className="mr-4 text-cobalt-500" />
-                <span className="w-24 shrink-0 text-white/30 hidden md:inline-block">LOCATION:</span>
-                <span className="text-white">CASABLANCA, MARR</span>
+                <span className="w-24 shrink-0 text-slate-400 dark:text-white/30 hidden md:inline-block">LOCATION:</span>
+                <span className="text-text-light dark:text-white">CASABLANCA, MARR</span>
               </div>
 
               <div className="flex items-center text-white/50 border-white/5 border-b pb-4">
                 <Clock size={16} className="mr-4 text-cobalt-500" />
-                <span className="w-24 shrink-0 text-white/30 hidden md:inline-block">TIME:</span>
-                <span className="text-white">UTC {time}</span>
+                <span className="w-24 shrink-0 text-slate-400 dark:text-white/30 hidden md:inline-block">TIME:</span>
+                <span className="text-text-light dark:text-white">UTC {time}</span>
               </div>
 
               <div className="flex items-center text-white/50 border-white/5 border-b pb-4">
                 <Activity size={16} className="mr-4 text-emerald-500" />
-                <span className="w-24 shrink-0 text-white/30 hidden md:inline-block">STATUS:</span>
+                <span className="w-24 shrink-0 text-slate-400 dark:text-white/30 hidden md:inline-block">STATUS:</span>
                 <span className="text-emerald-400 font-bold flex items-center drop-shadow-md">
                   <span className="relative flex h-2 w-2 mr-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -92,7 +92,7 @@ export default function ContactTerminal() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card bg-[#0B1120]/80 border-white/10 p-8 md:p-10 rounded-2xl shadow-glass-dark relative overflow-hidden"
+            className="bg-white/90 dark:glass-card dark:bg-[#0B1120]/80 border border-slate-200 dark:border-white/10 p-8 md:p-10 rounded-2xl shadow-sm dark:shadow-glass-dark relative overflow-hidden"
           >
             {/* Ambient Background Glow inside the card */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-cobalt-600/10 blur-[80px] rounded-full pointer-events-none z-0" />
@@ -103,18 +103,18 @@ export default function ContactTerminal() {
                   key="success"
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-[#090E1A] border border-emerald-500/30 rounded-2xl p-8 text-center"
+                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white dark:bg-[#090E1A] border border-emerald-500/30 rounded-2xl p-8 text-center"
                 >
                   <CheckCircle size={48} className="text-emerald-500 mb-6 drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]" />
                   <h3 className="font-mono font-bold tracking-[0.2em] text-emerald-400 uppercase text-sm md:text-base">
                     SUCCESS: MESSAGE_DELIVERED
                   </h3>
-                  <p className="text-white/40 mt-4 text-xs font-mono max-w-xs leading-relaxed uppercase">
+                  <p className="text-slate-500 dark:text-white/40 mt-4 text-xs font-mono max-w-xs leading-relaxed uppercase">
                     Encrypted payload received. The Architect will respond shortly.
                   </p>
                   <button
                     onClick={() => setFormState("idle")}
-                    className="mt-8 font-mono text-xs text-white/40 hover:text-white underline underline-offset-4 tracking-widest transition-colors"
+                    className="mt-8 font-mono text-xs text-slate-500 dark:text-white/40 hover:text-blue-700 dark:hover:text-white underline underline-offset-4 tracking-widest transition-colors"
                   >
                     RESET_TERMINAL
                   </button>
@@ -127,29 +127,29 @@ export default function ContactTerminal() {
                   className="space-y-6 relative z-10"
                 >
                   <div className="space-y-2">
-                    <label className="block font-mono text-[10px] tracking-widest text-cobalt-200/60 uppercase">NAME</label>
+                    <label className="block font-mono text-[10px] tracking-widest text-slate-500 dark:text-cobalt-200/60 uppercase">NAME</label>
                     <input
                       required
                       disabled={formState === "transmitting"}
                       type="text"
-                      className="w-full bg-[#030508]/50 border border-white/10 rounded-lg px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner disabled:opacity-50"
+                      className="w-full bg-slate-50 dark:bg-[#030508]/50 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-text-light dark:text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner disabled:opacity-50"
                       placeholder="e.g. John Doe"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block font-mono text-[10px] tracking-widest text-cobalt-200/60 uppercase">EMAIL</label>
+                    <label className="block font-mono text-[10px] tracking-widest text-slate-500 dark:text-cobalt-200/60 uppercase">EMAIL</label>
                     <input
                       required
                       disabled={formState === "transmitting"}
                       type="email"
-                      className="w-full bg-[#030508]/50 border border-white/10 rounded-lg px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner disabled:opacity-50"
+                      className="w-full bg-slate-50 dark:bg-[#030508]/50 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-text-light dark:text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner disabled:opacity-50"
                       placeholder="john@enterprise.com"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="block font-mono text-[10px] tracking-widest text-cobalt-200/60 uppercase">
+                    <label className="block font-mono text-[10px] tracking-widest text-slate-500 dark:text-cobalt-200/60 uppercase">
                       PROJECT_TYPE
                     </label>
 
@@ -157,9 +157,9 @@ export default function ContactTerminal() {
                       required
                       defaultValue=""
                       disabled={formState === "transmitting"}
-                      className="w-full bg-[#030508]/50 border border-white/10 rounded-lg px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner appearance-none disabled:opacity-50"
+                      className="w-full bg-slate-50 dark:bg-[#030508]/50 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-text-light dark:text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner appearance-none disabled:opacity-50"
                     >
-                      <option value="" disabled className="text-white/40">
+                      <option value="" disabled className="text-slate-400 dark:text-white/40">
                         Select a classification...
                       </option>
 
@@ -172,12 +172,12 @@ export default function ContactTerminal() {
 
 
                   <div className="space-y-2">
-                    <label className="block font-mono text-[10px] tracking-widest text-cobalt-200/60 uppercase">MESSAGE</label>
+                    <label className="block font-mono text-[10px] tracking-widest text-slate-500 dark:text-cobalt-200/60 uppercase">MESSAGE</label>
                     <textarea
                       required
                       disabled={formState === "transmitting"}
                       rows={4}
-                      className="w-full bg-[#030508]/50 border border-white/10 rounded-lg px-4 py-3 text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner resize-none disabled:opacity-50"
+                      className="w-full bg-slate-50 dark:bg-[#030508]/50 border border-slate-200 dark:border-white/10 rounded-lg px-4 py-3 text-text-light dark:text-white font-mono text-sm focus:outline-none focus:border-cobalt-500 focus:ring-1 focus:ring-cobalt-500 transition-all shadow-inner resize-none disabled:opacity-50"
                       placeholder="Enter operational parameters..."
                     />
                   </div>

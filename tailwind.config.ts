@@ -37,11 +37,13 @@ const config: Config = {
           900: "#1E3370",
         },
         surface: {
-          light: "#FFFFFF",
-          "light-secondary": "#F8FAFC",
+          light: "#F8FAFC",
+          "light-secondary": "#F1F5F9",
+          DEFAULT: "#F8FAFC",
           dark: "#0F172A",
           "dark-secondary": "#1E293B",
         },
+        "text-light": "#0F172A",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],

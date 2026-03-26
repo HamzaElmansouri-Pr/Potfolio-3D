@@ -53,7 +53,7 @@ function DataConsoleCard({
       onMouseMove={handleMouse}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformPerspective: 1000 }}
-      className="group block relative w-full border border-white/5 bg-[#070B14] overflow-hidden transform-gpu flex flex-col items-stretch"
+      className="group block relative w-full border border-slate-200 dark:border-white/5 bg-white dark:bg-[#070B14] shadow-sm dark:shadow-none overflow-hidden transform-gpu flex flex-col items-stretch"
     >
       {/* ─── Top: Image Pane ─── */}
       <div className="relative w-full aspect-video overflow-hidden bg-black outline outline-1 outline-white/5">
@@ -61,7 +61,7 @@ function DataConsoleCard({
           src={project.heroImage}
           alt={project.title}
           fill
-          className="object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
+          className="object-cover contrast-[1.15] dark:contrast-100 transition-all duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         
@@ -73,16 +73,16 @@ function DataConsoleCard({
       </div>
 
       {/* ─── Bottom: Metadata Pane ─── */}
-      <div className="p-5 bg-[#05080E] border-t border-white/5 flex flex-col justify-between grow">
+      <div className="p-5 bg-white dark:bg-[#05080E] border-t border-slate-100 dark:border-white/5 flex flex-col justify-between grow">
         
         {/* Line 1: Identity */}
-        <div className="font-mono text-[9px] text-white/40 tracking-[0.2em] mb-3 uppercase flex items-center justify-between">
+        <div className="font-mono text-[9px] text-slate-500 dark:text-white/40 tracking-[0.2em] mb-3 uppercase flex items-center justify-between">
           <span>ID: 0x0{project.id} // {project.category}</span>
-          <span className="text-cobalt-500/50">[{project.completedAt.split('-')[0]}]</span>
+          <span className="text-blue-600 dark:text-cobalt-500/50">[{project.completedAt.split('-')[0]}]</span>
         </div>
 
         {/* Line 2: Title */}
-        <h2 className="font-display font-medium text-lg lg:text-xl text-white leading-tight mb-4 group-hover:text-cobalt-300 transition-colors">
+        <h2 className="font-display font-medium text-lg lg:text-xl text-text-light dark:text-white leading-tight mb-4 group-hover:text-blue-700 dark:group-hover:text-cobalt-300 transition-colors">
           {project.title}
         </h2>
 
@@ -96,7 +96,7 @@ function DataConsoleCard({
               style={{ backgroundColor: tech.color === '#000000' ? '#ffffff' : tech.color }} // Adjust black icons for dark mode
             />
           ))}
-          <span className="ml-2 font-mono text-[8px] tracking-widest text-white/30 uppercase group-hover:text-white/50 transition-colors">
+          <span className="ml-2 font-mono text-[8px] tracking-widest text-slate-400 dark:text-white/30 uppercase group-hover:text-slate-600 dark:group-hover:text-white/50 transition-colors">
              SYS_MODULES_DETECTED
           </span>
         </div>
@@ -147,7 +147,7 @@ export default function EliteEngineeringArchive() {
   });
 
   return (
-    <div className="min-h-screen bg-[#030508] text-white overflow-hidden relative selection:bg-cobalt-500/30">
+    <div className="min-h-screen bg-surface-light dark:bg-[#030508] text-text-light dark:text-white overflow-hidden relative selection:bg-cobalt-500/30">
       
       {/* ─── Global Scanlines / CRT effect ─── */}
       <div className="fixed inset-0 pointer-events-none z-[100] opacity-[0.02]" 
@@ -161,12 +161,12 @@ export default function EliteEngineeringArchive() {
         className="w-full max-w-[1600px] mx-auto px-6 pt-[120px] md:pt-[160px] pb-4 flex flex-col relative z-20"
       >
         <div className="flex items-center w-full">
-          <h1 className="text-3xl font-display font-bold text-white tracking-tighter uppercase mr-6 drop-shadow-lg">
+          <h1 className="text-3xl font-display font-bold text-text-light dark:text-white tracking-tighter uppercase mr-6 drop-shadow-sm dark:drop-shadow-lg">
             PROJECT_VAULT
           </h1>
-          <div className="flex-grow border-t border-white/5" />
+          <div className="flex-grow border-t border-slate-200 dark:border-white/5" />
         </div>
-        <div className="mt-3 font-mono text-[10px] text-white/40 tracking-widest uppercase">
+        <div className="mt-3 font-mono text-[10px] text-slate-500 dark:text-white/40 tracking-widest uppercase">
           TOTAL_NODES: {filteredProjects.length < 10 ? `0${filteredProjects.length}` : filteredProjects.length} // REPOSITORY: HAMZA_OS // LAST_SYNC: [{currentTime || "..."}]
         </div>
       </motion.div>
@@ -179,18 +179,18 @@ export default function EliteEngineeringArchive() {
         className="w-full max-w-3xl mx-auto px-6 mb-12 relative z-20 flex justify-center mt-10"
       >
         <div 
-          className="relative w-full flex items-center bg-[#0B1120] border border-white/10 rounded-full px-6 py-4 transition-all duration-300 shadow-[0_0_15px_rgba(37,99,235,0.1)] focus-within:border-cobalt-500 focus-within:shadow-[0_0_25px_rgba(37,99,235,0.4)]"
+          className="relative w-full flex items-center bg-white dark:bg-[#0B1120] border border-slate-200 dark:border-white/10 rounded-full px-6 py-4 transition-all duration-300 shadow-sm dark:shadow-[0_0_15px_rgba(37,99,235,0.1)] focus-within:border-cobalt-500 focus-within:shadow-md dark:focus-within:shadow-[0_0_25px_rgba(37,99,235,0.4)]"
         >
-          <Search className="text-cobalt-500 mr-4" size={20} />
+          <Search className="text-blue-600 dark:text-cobalt-500 mr-4" size={20} />
           <input 
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search resources..."
             spellCheck={false}
-            className="bg-transparent border-none outline-none font-mono text-sm md:text-base text-white w-full placeholder-white/20"
+            className="bg-transparent border-none outline-none font-mono text-sm md:text-base text-text-light dark:text-white w-full placeholder-slate-400 dark:placeholder-white/20"
           />
-          <div className="ml-4 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 font-mono text-[10px] text-white/40 whitespace-nowrap hidden md:block">
+          <div className="ml-4 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 font-mono text-[10px] text-slate-500 dark:text-white/40 whitespace-nowrap hidden md:block">
             CTRL+K
           </div>
         </div>
@@ -226,7 +226,7 @@ export default function EliteEngineeringArchive() {
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="fixed inset-0 z-[150] bg-[#030508] flex items-center justify-center pointer-events-none"
+            className="fixed inset-0 z-[150] bg-surface-light dark:bg-[#030508] flex items-center justify-center pointer-events-none"
           >
             <motion.div
               initial={{ scale: 0.8, filter: "blur(10px)", opacity: 0 }}
@@ -241,7 +241,7 @@ export default function EliteEngineeringArchive() {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030508] to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-surface-light dark:from-[#030508] to-transparent" />
             </motion.div>
           </motion.div>
         )}

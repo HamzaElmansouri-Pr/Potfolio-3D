@@ -93,7 +93,7 @@ export function HeroOrbitSlider() {
   const RADIUS_Y = 120; 
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#0B1120]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-surface-light dark:bg-[#0B1120]">
       
       {/* ─── Background Layer & Data Points ─── */}
       <div 
@@ -152,7 +152,7 @@ export function HeroOrbitSlider() {
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -15, filter: "blur(8px)" }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]"
+                className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-text-light dark:text-white tracking-tight leading-[1.1]"
               >
                 {activeItem.hudTitle}
               </motion.h1>
@@ -214,7 +214,7 @@ export function HeroOrbitSlider() {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className={`w-6 h-6 rotate-45 border border-cobalt-500/50 transition-colors duration-300 ${activeItem.id === "frontend" ? "bg-cobalt-500" : "bg-[#0B1120]"}`} />
+                  <div className={`w-6 h-6 rotate-45 border border-cobalt-500/50 transition-colors duration-300 ${activeItem.id === "frontend" ? "bg-cobalt-500" : "bg-white dark:bg-[#0B1120]"}`} />
                 </motion.div>
 
                 {/* Node 2: Backend */}
@@ -226,7 +226,7 @@ export function HeroOrbitSlider() {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className={`w-8 h-8 border border-cobalt-500/50 transition-colors duration-300 ${activeItem.id === "backend" ? "bg-cobalt-500" : "bg-[#0B1120]"}`} />
+                  <div className={`w-8 h-8 border border-cobalt-500/50 transition-colors duration-300 ${activeItem.id === "backend" ? "bg-cobalt-500" : "bg-white dark:bg-[#0B1120]"}`} />
                 </motion.div>
 
                 {/* Node 3: Architecture */}
@@ -238,7 +238,7 @@ export function HeroOrbitSlider() {
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className={`w-6 h-6 rounded-full border border-cobalt-500/50 transition-colors duration-300 ${activeItem.id === "architecture" ? "bg-cobalt-500" : "bg-[#0B1120]"}`} />
+                  <div className={`w-6 h-6 rounded-full border border-cobalt-500/50 transition-colors duration-300 ${activeItem.id === "architecture" ? "bg-cobalt-500" : "bg-white dark:bg-[#0B1120]"}`} />
                 </motion.div>
               </div>
 
@@ -269,7 +269,7 @@ export function HeroOrbitSlider() {
               return (
                 <motion.div
                   key={item.id}
-                  className="absolute flex flex-col items-center justify-center text-center p-5 rounded-2xl glass-card border border-white/5 w-60 cursor-pointer"
+                  className="absolute flex flex-col items-center justify-center text-center p-5 rounded-2xl bg-white/70 backdrop-blur-md dark:glass-card border border-slate-200 dark:border-white/5 w-60 cursor-pointer shadow-sm dark:shadow-none"
                   style={{
                     x,
                     y,
@@ -289,7 +289,7 @@ export function HeroOrbitSlider() {
                   <div className="w-10 h-10 mb-3 rounded-lg border border-cobalt-500/30 bg-cobalt-500/10 flex items-center justify-center shadow-inner">
                     <item.icon className="text-cobalt-400" size={20} />
                   </div>
-                  <h3 className="font-display font-bold tracking-wider text-sm text-white mb-2 uppercase">
+                  <h3 className="font-display font-bold tracking-wider text-sm text-text-light dark:text-white mb-2 uppercase">
                     {item.title}
                   </h3>
                   <p className="text-xs text-[var(--text-muted)] leading-relaxed">

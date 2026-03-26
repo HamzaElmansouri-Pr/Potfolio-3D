@@ -19,13 +19,13 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="w-full bg-[#030508] border-t border-white/5 py-12 md:py-16 relative z-10 text-white">
+    <footer className="w-full bg-surface-light dark:bg-[#030508] border-t border-slate-200 dark:border-white/5 py-12 md:py-16 relative z-10 text-text-light dark:text-white">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 items-center">
           
           {/* Column 1: Identity & Heartbeat */}
           <div className="flex flex-col items-start md:items-start space-y-3">
-            <Link href="/" className="font-display font-bold text-xl tracking-tight text-white flex items-center">
+            <Link href="/" className="font-display font-bold text-xl tracking-tight text-text-light dark:text-white flex items-center">
               <span className="text-cobalt-500 mr-1">&lt;</span>
               YourName
               <span className="text-cobalt-500 ml-1">/&gt;</span>
@@ -37,7 +37,7 @@ export function Footer() {
               </span>
               SYSTEMS_ONLINE
             </div>
-            <div className="text-[10px] text-white/30 font-mono flex items-center mt-2">
+            <div className="text-[10px] text-slate-400 dark:text-white/30 font-mono flex items-center mt-2">
               <Activity size={12} className="mr-1.5" /> Live System Time (UTC): {time}
             </div>
           </div>
@@ -58,7 +58,7 @@ export function Footer() {
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white/40 hover:text-white transition-colors duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+              className="text-slate-400 dark:text-white/40 hover:text-text-light dark:hover:text-white transition-colors duration-300 hover:drop-shadow-sm dark:hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
             >
               <Github size={20} />
               <span className="sr-only">GitHub</span>
@@ -67,7 +67,7 @@ export function Footer() {
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white/40 hover:text-cobalt-400 transition-colors duration-300 hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
+              className="text-slate-400 dark:text-white/40 hover:text-blue-700 dark:hover:text-cobalt-400 transition-colors duration-300 hover:drop-shadow-sm dark:hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
             >
               <Linkedin size={20} />
               <span className="sr-only">LinkedIn</span>
@@ -76,7 +76,7 @@ export function Footer() {
               href="https://twitter.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-white/40 hover:text-white transition-colors duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+              className="text-slate-400 dark:text-white/40 hover:text-text-light dark:hover:text-white transition-colors duration-300 hover:drop-shadow-sm dark:hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
             >
               <Twitter size={20} />
               <span className="sr-only">Twitter/X</span>
@@ -86,7 +86,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-white/30 font-mono">
+        <div className="mt-12 pt-6 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-slate-400 dark:text-white/30 font-mono">
           <p>© {new Date().getFullYear()} — Built with Next.js 15 & Framer Motion</p>
           <p className="mt-2 md:mt-0 tracking-widest hidden md:block">ALL SYSTEMS NOMINAL</p>
         </div>

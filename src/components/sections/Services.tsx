@@ -69,7 +69,7 @@ function BentoCard({ card, index, controls }: { card: ServiceData; index: number
           transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
         }),
       }}
-      className={`glass-card bento-item group relative flex flex-col justify-between overflow-hidden bg-[#0B1120] border border-white/10 p-6 md:p-8 ${card.className}`}
+      className={`bg-white dark:glass-card dark:bento-item shadow-sm dark:shadow-none group relative flex flex-col justify-between overflow-hidden dark:bg-[#0B1120] border border-slate-200 dark:border-white/10 p-6 md:p-8 ${card.className}`}
       onMouseMove={handleMouseMove}
     >
       {/* ─── Radial Mouse Glow Effect ─── */}
@@ -92,7 +92,7 @@ function BentoCard({ card, index, controls }: { card: ServiceData; index: number
         {/* Top: Icon & Telemetry */}
         <div className="flex justify-between items-start mb-12">
           <div className="w-12 h-12 rounded-xl border border-cobalt-500/20 bg-cobalt-500/10 flex items-center justify-center shadow-inner group-hover:border-cobalt-500/50 transition-colors duration-300">
-            <card.icon className="text-cobalt-500" size={24} strokeWidth={1.5} />
+            <card.icon className="text-blue-700 dark:text-cobalt-500" size={24} strokeWidth={1.5} />
           </div>
 
           <div className="flex items-center space-x-2">
@@ -104,7 +104,7 @@ function BentoCard({ card, index, controls }: { card: ServiceData; index: number
 
         {/* Bottom: Text */}
         <div>
-          <h3 className="font-display font-bold text-xl md:text-2xl text-white mb-3 tracking-wide group-hover:text-cobalt-100 transition-colors">
+          <h3 className="font-display font-bold text-xl md:text-2xl text-text-light dark:text-white mb-3 tracking-wide group-hover:text-blue-800 dark:group-hover:text-cobalt-100 transition-colors">
             {card.title}
           </h3>
           <p className="text-[var(--text-secondary)] text-sm md:text-base leading-relaxed max-w-sm">
@@ -121,12 +121,12 @@ export function Services() {
   const { ref, controls } = useScrollReveal(0.15);
 
   return (
-    <section id="services" className="relative py-24 bg-[#0B1120]">
+    <section id="services" className="relative py-24 bg-surface-light dark:bg-[#0B1120]">
       <div className="container mx-auto px-6 max-w-6xl">
         
         {/* Header */}
         <div className="mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-text-light dark:text-white tracking-tight mb-4">
             Workshop & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cobalt-400 to-cobalt-600">Modules</span>
           </h2>
           <p className="text-[var(--text-secondary)] max-w-2xl text-lg">
