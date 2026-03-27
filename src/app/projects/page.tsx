@@ -77,7 +77,7 @@ function DataConsoleCard({
         
         {/* Line 1: Identity */}
         <div className="font-mono text-[9px] text-slate-500 dark:text-white/40 tracking-[0.2em] mb-3 uppercase flex items-center justify-between">
-          <span>ID: 0x0{project.id} // {project.category}</span>
+          <span>ID: 0x0{project.id} {"//"} {project.category}</span>
           <span className="text-blue-600 dark:text-cobalt-500/50">[{project.completedAt.split('-')[0]}]</span>
         </div>
 
@@ -167,7 +167,7 @@ export default function EliteEngineeringArchive() {
           <div className="flex-grow border-t border-slate-200 dark:border-white/5" />
         </div>
         <div className="mt-3 font-mono text-[10px] text-slate-500 dark:text-white/40 tracking-widest uppercase">
-          TOTAL_NODES: {filteredProjects.length < 10 ? `0${filteredProjects.length}` : filteredProjects.length} // REPOSITORY: HAMZA_OS // LAST_SYNC: [{currentTime || "..."}]
+          TOTAL_NODES: {filteredProjects.length < 10 ? `0${filteredProjects.length}` : filteredProjects.length} {"//"} REPOSITORY: HAMZA_OS {"//"} LAST_SYNC: [{currentTime || "..."}]
         </div>
       </motion.div>
 

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Terminal, Lock, MapPin, Clock, Activity, CheckCircle, Send } from "lucide-react";
+import { siteConfig } from "@/lib/config";
 
 export default function ContactTerminal() {
   const [time, setTime] = useState<string>("00:00:00");
@@ -50,7 +51,7 @@ export default function ContactTerminal() {
               </h1>
               <p className="font-mono text-xs md:text-sm text-cobalt-400 tracking-widest uppercase flex items-center bg-cobalt-950/30 border border-cobalt-500/20 px-4 py-2 rounded w-fit">
                 <Terminal size={14} className="mr-2" />
-                // INITIATE_COMMUNICATION
+                {"// INITIATE_COMMUNICATION"}
               </p>
             </div>
 
@@ -63,7 +64,7 @@ export default function ContactTerminal() {
               <div className="flex items-center text-white/50 border-white/5 border-b pb-4">
                 <MapPin size={16} className="mr-4 text-cobalt-500" />
                 <span className="w-24 shrink-0 text-slate-400 dark:text-white/30 hidden md:inline-block">LOCATION:</span>
-                <span className="text-text-light dark:text-white">CASABLANCA, MARR</span>
+                <span className="text-text-light dark:text-white uppercase">{siteConfig.location.city}, {siteConfig.location.country.substring(0, 4)}</span>
               </div>
 
               <div className="flex items-center text-white/50 border-white/5 border-b pb-4">

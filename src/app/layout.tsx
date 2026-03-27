@@ -3,15 +3,15 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | YourName — Software Engineer",
-    default: "YourName — Software Engineering Portfolio",
+    template: `%s | ${siteConfig.name} — Software Engineer`,
+    default: siteConfig.title,
   },
-  description:
-    "Software Engineer specializing in scalable cloud architectures, backend systems, and enterprise solutions. Master's in Software Engineering.",
+  description: siteConfig.description,
   keywords: [
     "Software Engineer",
     "Backend Developer",
@@ -21,22 +21,21 @@ export const metadata: Metadata = {
     "Morocco",
     "Portfolio",
   ],
-  authors: [{ name: "YourName" }],
-  creator: "YourName",
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourname.dev",
-    siteName: "YourName Portfolio",
-    title: "YourName — Software Engineering Portfolio",
-    description:
-      "Building enterprise-grade software solutions. Specializing in cloud, backend, and system architecture.",
+    url: "https://yourdomain.com",
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "YourName — Software Engineering Portfolio",
-    description: "Building enterprise-grade software solutions.",
-    creator: "@yourhandle",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    creator: siteConfig.socials.twitter,
   },
   robots: {
     index: true,

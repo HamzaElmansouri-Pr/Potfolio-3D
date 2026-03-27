@@ -118,7 +118,7 @@ export function FeaturedProjects() {
                       
                       {/* Micro-Pills Tech Stack */}
                       <div className="flex flex-wrap gap-1.5">
-                        {project.techStack.slice(0, 4).map((tech: any) => (
+                        {project.techStack.slice(0, 4).map((tech: { name: string; color: string }) => (
                           <span 
                             key={tech.name} 
                             className="px-2 py-1 text-[9px] font-mono font-bold tracking-widest uppercase rounded bg-cobalt-950/80 border border-cobalt-500/30 text-cobalt-200"
@@ -145,7 +145,7 @@ export function FeaturedProjects() {
           >
             <div className="absolute inset-0 bg-cobalt-500/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             <span className="relative z-10 flex items-center text-xs font-mono font-bold tracking-widest text-cobalt-100 uppercase">
-              // Execute Full Directory
+              {"// Execute Full Directory"}
               <svg className="w-3.5 h-3.5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </span>
           </Link>

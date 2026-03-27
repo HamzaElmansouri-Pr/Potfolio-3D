@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Github, Linkedin, Twitter, Activity } from "lucide-react";
+import { siteConfig } from "@/lib/config";
 
 export function Footer() {
   const [time, setTime] = useState<string>("00:00:00");
@@ -27,7 +28,7 @@ export function Footer() {
           <div className="flex flex-col items-start md:items-start space-y-3">
             <Link href="/" className="font-display font-bold text-xl tracking-tight text-text-light dark:text-white flex items-center">
               <span className="text-cobalt-500 mr-1">&lt;</span>
-              YourName
+              {siteConfig.logoText}
               <span className="text-cobalt-500 ml-1">/&gt;</span>
             </Link>
             <div className="flex items-center text-xs font-mono text-emerald-500/80 tracking-widest">
@@ -45,17 +46,17 @@ export function Footer() {
           {/* Column 2: The Node */}
           <div className="flex flex-col items-start md:items-center space-y-1">
             <div className="text-[10px] md:text-xs font-mono text-cobalt-300/60 uppercase tracking-[0.2em] md:text-center leading-relaxed">
-              NODE: CASABLANCA, MOROCCO
+              NODE: {siteConfig.location.city}, {siteConfig.location.country}
               <br className="hidden md:block" />
-              <span className="md:hidden"> // </span>
-              33.5731° N, 7.5898° W
+              <span className="md:hidden"> {"//"} </span>
+              {siteConfig.location.coordinates}
             </div>
           </div>
 
           {/* Column 3: Socials */}
           <div className="flex items-center md:justify-end space-x-6">
             <a 
-              href="https://github.com" 
+              href={siteConfig.socials.github} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-400 dark:text-white/40 hover:text-text-light dark:hover:text-white transition-colors duration-300 hover:drop-shadow-sm dark:hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
@@ -64,7 +65,7 @@ export function Footer() {
               <span className="sr-only">GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com" 
+              href={siteConfig.socials.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-400 dark:text-white/40 hover:text-blue-700 dark:hover:text-cobalt-400 transition-colors duration-300 hover:drop-shadow-sm dark:hover:drop-shadow-[0_0_8px_rgba(37,99,235,0.8)]"
@@ -73,7 +74,7 @@ export function Footer() {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="https://twitter.com" 
+              href={siteConfig.socials.twitter} 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-slate-400 dark:text-white/40 hover:text-text-light dark:hover:text-white transition-colors duration-300 hover:drop-shadow-sm dark:hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"

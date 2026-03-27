@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/config";
 import type { NavLink } from "@/types";
 
 const NAV_LINKS: NavLink[] = [
@@ -59,7 +60,7 @@ export function Navbar() {
                        transition-colors duration-200"
           >
             <span className="text-cobalt-500">&lt;</span>
-            YourName
+            {siteConfig.logoText}
             <span className="text-cobalt-500">/&gt;</span>
           </Link>
 

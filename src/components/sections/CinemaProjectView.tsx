@@ -219,7 +219,7 @@ export function CinemaProjectView({ project, nextProjectSlug, nextProjectTitle }
           <div className="pt-20 pb-32 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between group relative z-10">
             <div>
               <span className="font-mono text-[10px] text-blue-600 dark:text-cobalt-400/60 tracking-widest uppercase block mb-3">
-                // MOUNT NEXT DATABANK
+                {"// MOUNT NEXT DATABANK"}
               </span>
               <h2 className="font-display text-2xl md:text-5xl font-bold text-text-light dark:text-white group-hover:text-blue-700 dark:group-hover:text-cobalt-400 transition-colors drop-shadow-sm dark:drop-shadow-md">
                 {nextProjectTitle}

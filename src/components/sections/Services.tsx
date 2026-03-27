@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Layers, Cpu, Shield, Cloud, LucideIcon } from "lucide-react";
@@ -46,6 +46,7 @@ const CARDS: ServiceData[] = [
 ];
 
 /* ─── Interactive Mouse Tracking Bento Component ────────────────────────── */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function BentoCard({ card, index, controls }: { card: ServiceData; index: number; controls: any }) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);

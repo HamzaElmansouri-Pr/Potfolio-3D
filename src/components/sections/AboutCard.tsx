@@ -14,6 +14,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { useScrollReveal, fadeUpVariant, slideInLeftVariant, staggerContainerVariant } from "@/hooks/useScrollReveal";
+import { siteConfig } from "@/lib/config";
 
 const SKILLS = [
   "Spring Boot",
@@ -41,8 +42,8 @@ export function AboutCard() {
     setTimeout(() => setCvState("idle"), 2500);
     // Open / download the CV file
     const link = document.createElement("a");
-    link.href = "/cv.pdf"; // drop your actual CV here as /public/cv.pdf
-    link.download = "YourName_CV.pdf";
+    link.href = siteConfig.resumeUrl;
+    link.download = `${siteConfig.name.replace(/\s+/g, '_')}_CV.pdf`;
     link.click();
   };
 
@@ -85,7 +86,7 @@ export function AboutCard() {
               >
                 <Image
                   src="/images/profile/profile.png"
-                  alt="Your Name — Software Engineer"
+                  alt={`${siteConfig.name} — Software Engineer`}
                   fill
                   sizes="(max-width: 768px) 256px, 320px"
                   className="object-cover object-top"
@@ -124,7 +125,7 @@ export function AboutCard() {
                 className="font-display text-4xl md:text-5xl font-bold
                            text-[var(--text-primary)] leading-tight"
               >
-                Your Name
+                {siteConfig.name}
               </h2>
               <p className="text-lg text-cobalt-500 font-medium font-display">
                 Software Engineer & Cloud Architect
@@ -138,7 +139,7 @@ export function AboutCard() {
             >
               <span className="flex items-center gap-1.5">
                 <MapPin size={14} className="text-cobalt-500" />
-                Morocco
+                {siteConfig.location.country}
               </span>
               <span className="flex items-center gap-1.5">
                 <GraduationCap size={14} className="text-cobalt-500" />
@@ -216,7 +217,7 @@ export function AboutCard() {
 
               {/* Social links */}
               <a
-                href="https://github.com/youruser"
+                href={siteConfig.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -225,7 +226,7 @@ export function AboutCard() {
                 <Github size={16} />
               </a>
               <a
-                href="https://linkedin.com/in/youruser"
+                href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
